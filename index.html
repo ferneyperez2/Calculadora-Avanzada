@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Avanzada con Historial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="currentInput" value="0" disabled>
+            <div id="previousInput"></div>
+        </div>
+        <div class="buttons">
+            <button onclick="clearDisplay()">AC</button>
+            <button onclick="changeSign()">+/-</button>
+            <button onclick="calculatePercentage()">%</button>
+            <button class="operator" onclick="operate('/')">/</button>
+
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button class="operator" onclick="operate('*')">*</button>
+
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button class="operator" onclick="operate('-')">-</button>
+
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button class="operator" onclick="operate('+')">+</button>
+
+            <button onclick="appendNumber('0')" class="zero">0</button>
+            <button onclick="appendDecimal()">.</button>
+            <button class="equal" onclick="calculate()">=</button>
+
+            <button class="function" onclick="calculateFunction('sin')">sin</button>
+            <button class="function" onclick="calculateFunction('cos')">cos</button>
+            <button class="function" onclick="calculateFunction('tan')">tan</button>
+            <button class="function" onclick="calculateFunction('log')">log</button>
+            <button class="function" onclick="calculateFunction('ln')">ln</button>
+            <button class="function" onclick="calculateFunction('exp')">exp</button>
+            <button class="function" onclick="calculatePower()">y^x</button>
+            <button class="function" onclick="calculateSquareRoot()">√</button>
+        </div>
+        <div class="history">
+            <h3>Historial</h3>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
